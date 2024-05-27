@@ -1,6 +1,6 @@
 {
   "users": {
-    "alice": {
+    "thang": {
       "roles": ["admin"],
       "location": {
         "country": "US",
