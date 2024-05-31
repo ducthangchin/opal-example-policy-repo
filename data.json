@@ -1,78 +1,78 @@
 {
-  "roles": [
-    "admin",
-    "manager",
-    "secretary",
-    "accountant",
-    "employee"
-  ],
-  "resources": [
-    "document",
-    "salary"
-  ],
-  "permissions": [
-    "read",
-    "update",
-    "delete",
-    "create",
-    "manage_access"
-  ],
-  "role_permissions": {
-    "manager": [
-      {
-        "action": "read",
-        "type": "document"
-      },
-      {
-        "action": "manage_access",
-        "type": "document"
-      },
-      {
-        "action": "read",
-        "type": "salary"
-      }
+    "roles": [
+        "admin",
+        "manager",
+        "secretary",
+        "accountant",
+        "employee"
     ],
-    "secretary": [
-      {
-        "action": "read",
-        "type": "document"
-      },
-      {
-        "action": "create",
-        "type": "document"
-      },
-      {
-        "action": "update",
-        "type": "document"
-      },
-      {
-        "action": "delete",
-        "type": "document"
-      }
+    "resources": [
+        "document",
+        "salary"
     ],
-    "accountant": [
-      {
-        "action": "read",
-        "type": "salary"
-      },
-      {
-        "action": "create",
-        "type": "salary"
-      },
-      {
-        "action": "update",
-        "type": "salary"
-      },
-      {
-        "action": "delete",
-        "type": "salary"
-      }
+    "permissions": [
+        "read",
+        "update",
+        "delete",
+        "create",
+        "access_control"
     ],
-    "employee": [
-      {
-        "action": "read",
-        "type": "salary"
-      }
-    ]
-  }
+    "role_permissions": {
+        "manager": [
+            {
+                "action": "read",
+                "type": "document"
+            },
+            {
+                "action": "access_control",
+                "type": "document"
+            },
+            {
+                "action": "read",
+                "type": "salary"
+            }
+        ],
+        "secretary": [
+            {
+                "action": "read",
+                "type": "document"
+            },
+            {
+                "action": "create",
+                "type": "document"
+            },
+            {
+                "action": "update",
+                "type": "document"
+            },
+            {
+                "action": "delete",
+                "type": "document"
+            }
+        ],
+        "accountant": [
+            {
+                "action": "read",
+                "type": "salary"
+            },
+            {
+                "action": "create",
+                "type": "salary"
+            },
+            {
+                "action": "update",
+                "type": "salary"
+            },
+            {
+                "action": "delete",
+                "type": "salary"
+            }
+        ],
+        "employee": [
+            {
+                "action": "read",
+                "type": "salary"
+            }
+        ]
+    }
 }
