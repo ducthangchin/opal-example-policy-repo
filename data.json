@@ -1,90 +1,78 @@
 {
-  "users": {
-    "thang": {
-      "roles": ["admin"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-     "sunil": {
-      "roles": ["guest"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    }
-  },
+  "roles": [
+    "admin",
+    "manager",
+    "secretary",
+    "accountant",
+    "employee"
+  ],
+  "resources": [
+    "document",
+    "salary"
+  ],
+  "permissions": [
+    "read",
+    "update",
+    "delete",
+    "create",
+    "manage_access"
+  ],
   "role_permissions": {
-    "customer": [
+    "manager": [
       {
         "action": "read",
-        "type": "dog"
+        "type": "document"
+      },
+      {
+        "action": "manage_access",
+        "type": "document"
       },
       {
         "action": "read",
-        "type": "cat"
+        "type": "salary"
+      }
+    ],
+    "secretary": [
+      {
+        "action": "read",
+        "type": "document"
       },
       {
-        "action": "adopt",
-        "type": "dog"
+        "action": "create",
+        "type": "document"
       },
       {
-        "action": "adopt",
-        "type": "cat"
+        "action": "update",
+        "type": "document"
+      },
+      {
+        "action": "delete",
+        "type": "document"
+      }
+    ],
+    "accountant": [
+      {
+        "action": "read",
+        "type": "salary"
+      },
+      {
+        "action": "create",
+        "type": "salary"
+      },
+      {
+        "action": "update",
+        "type": "salary"
+      },
+      {
+        "action": "delete",
+        "type": "salary"
       }
     ],
     "employee": [
       {
         "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
+        "type": "salary"
       }
-    ],
-    "billing": [
-      {
-        "action": "read",
-        "type": "finance"
-      },
-      {
-        "action": "update",
-        "type": "finance"
-      }
-    ],
-    "guest": [
-     {
-       "action": "read",
-       "type": "cat"
-     },
-     {
-       "action": "read",
-       "type": "finance"
-     }
     ]
   }
 }
