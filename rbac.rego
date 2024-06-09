@@ -18,7 +18,8 @@ default allow = false
 #         "type": "salary" | "document",
 #         "id": 12,
 #         "created_by": 12,
-#         "blocked": false
+#         "blocked": false,
+#	  "employee_id": 12,
 #     }
 # }
 
